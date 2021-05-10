@@ -23,7 +23,6 @@ import java.util.stream.Collectors;
 public class MovieCatalogResource {
 
     @Autowired
-    @LoadBalanced
     private RestTemplate restTemplate;
 
     @Autowired
@@ -31,7 +30,7 @@ public class MovieCatalogResource {
 
     @RequestMapping("/{userId}")
     public List<CatalogItem> getCatalog(@PathVariable("userId") String userId){
-
+        //RestTemplate restTemplate = restTemplateComponent.getRestTemplate();
         /*List<Rating> ratings = Arrays.asList(
                 new Rating("1234", 4),
                 new Rating("4567", 3)

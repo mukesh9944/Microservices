@@ -12,22 +12,19 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @SpringBootApplication
-@EnableEurekaClient
-@EnableAutoConfiguration
-@EnableConfigurationProperties
 @EnableDiscoveryClient
 public class MovieCatalogServiceApplication {
 
-	@Bean
 	@LoadBalanced
+	@Bean
 	public RestTemplate getRestTemplate() {
 		return  new RestTemplate();
 	}
 
-	@Bean
+	/*@Bean
 	public WebClient.Builder getWebClientBuilder() {
 		return WebClient.builder();
-	}
+	}*/
 
 	public static void main(String[] args) {
 
