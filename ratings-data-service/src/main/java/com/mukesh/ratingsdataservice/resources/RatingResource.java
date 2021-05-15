@@ -22,8 +22,8 @@ public class RatingResource {
     @RequestMapping("users/{userId}")
     public UserRating getUserRating(@PathVariable("userId") String userId){
         List<Rating> ratings = Arrays.asList(
-                new Rating("1234", 4),
-                new Rating("4567", 3)
+                new Rating("550", 4),
+                new Rating("500", 3)
         );
 
         UserRating userRating = new UserRating();
